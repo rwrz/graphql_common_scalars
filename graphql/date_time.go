@@ -1,4 +1,4 @@
-package graphql_common_scalars
+package graphql
 
 import (
 	"errors"
