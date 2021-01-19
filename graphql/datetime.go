@@ -10,7 +10,7 @@ import (
 	"github.com/99designs/gqlgen/graphql"
 )
 
-func MarshalDatetimeScalar(t time.Time) graphql.Marshaler {
+func MarshalDateTimeScalar(t time.Time) graphql.Marshaler {
 	if t.IsZero() {
 		return graphql.Null
 	}
@@ -20,7 +20,7 @@ func MarshalDatetimeScalar(t time.Time) graphql.Marshaler {
 	})
 }
 
-func UnmarshalDatetimeScalar(v interface{}) (time.Time, error) {
+func UnmarshalDateTimeScalar(v interface{}) (time.Time, error) {
 	if tmpStr, ok := v.(string); ok {
 		fmt.Printf(tmpStr)
 		return time.Parse(time.RFC3339, tmpStr)
